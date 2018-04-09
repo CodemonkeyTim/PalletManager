@@ -1,0 +1,10 @@
+{
+	"general" : {
+
+	},
+	"landingPage" : {
+		"insertPallet" 			: "вставить поддон",
+		"removePallet"			: ""
+	}
+
+}

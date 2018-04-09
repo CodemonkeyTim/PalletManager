@@ -1,0 +1,70 @@
+<div class="row">
+	<div class="col-sm">
+		<h2 id="welcome" class="text-center">
+			{{ 'palletInsertPage.pageHeader' | translate }}
+		</h2>
+	</div>
+</div>
+
+<br />
+<br />
+
+<div class="row">
+	<div class="col-sm">
+		<button class="btn btn-block btn-primary" ng-click="toLanding()">
+			<i class="fas fa-arrow-left"></i> {{ 'general.back' | translate }}
+		</button>
+	</div>
+</div>
+
+
+<br />
+<br />
+
+<div class="row">
+	<div class="col-sm">
+		<form>
+			<div class="form-group">
+		    	<label for="product">
+		    		{{ 'palletInsertPage.productName' | translate }}
+		    	</label>
+
+		    	<input class="form-control" placeholder="{{ 'palletInsertPage.productName' | translate }}" ng-model="pallet.productName">
+		  	</div>
+
+		  	<div class="form-group">
+		    	<label>
+		    		{{ 'palletInsertPage.productCount' | translate }}
+		    	</label>
+
+		    	<input class="form-control" placeholder="{{ 'palletInsertPage.productCount' | translate }}" ng-model="pallet.productCount">
+		  	</div>
+
+		  	<div class="form-group">
+		    	<label>
+		    		{{ 'palletInsertPage.warehouseSlot' | translate }}
+		    	</label>
+
+		    	<input class="form-control" placeholder="{{ 'palletInsertPage.warehouseSlot' | translate }}" ng-model="pallet.warehouseSlot">
+		  	</div>
+
+		  	<div class="form-group">
+		    	<label>
+		    		{{ 'palletInsertPage.notes' | translate }}
+		    	</label>
+
+		    	<textarea class="form-control" placeholder="{{ 'palletInsertPage.notes' | translate }}" ng-model="pallet.notes"></textarea>
+		  	</div>
+
+		  	<button type="submit" class="btn btn-primary btn-block btn-tall" ng-click="confirmInsert()">
+		  		{{ 'palletInsertPage.confirmInsert' | translate }}
+		  	</button>
+
+		  	<br />
+
+		  	<div class="alert alert-danger" ng-repeat="error in validationErrors">
+		  		{{ error }}
+		  	</div>
+		</form>		
+	</div>
+</div>

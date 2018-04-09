@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pallet Manager</title>
+		<link rel="stylesheet" href="css/palletManager.css" />
+		
+		<script src="js/lib/jquery-2.1.4.min.js"></script>
+		<script src="js/lib/angular-1.4.3.min.js"></script>
+		<script src="js/lib/angular-route-1.4.3.min.js"></script>
+		<script src="js/lib/angular-translate-2.7.2.min.js"></script>
+		<script src="js/lib/angular-translate-loader-static-files-2.7.2.js"></script>
+
+		<!-- Compiled and minified CSS -->
+	  	<link 
+	  		href="css/lib/bootstrap.min.css" 
+	  		rel="stylesheet">
+
+	  	<!-- Compiled and minified JavaScript -->
+	  	<script src="js/lib/bootstrap-4.0.0.beta3.min.js"></script>
+
+	  	<!-- Utility JavaScript -->
+	  	<script src="js/lib/moment-2.10.3.js"></script>
+	  	<script src="js/lib/fontAwesome-5.0.6.min.js"></script>		
+
+	  	<!-- App specific JavaScript -->
+		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/directives.js"></script>
+		<script src="js/filters.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body ng-app="palletManagerApp">
+		<div class="container" ng-view>
+			
+		</div>	
+	</body>
+	
+	<script>
+		initAngular();
+		initControllers();
+		configAngular();
+		initServices();
+		initDirectives();
+		initFilters();
+	</script>
+</html>

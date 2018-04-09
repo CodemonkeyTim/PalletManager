@@ -1,0 +1,42 @@
+{
+	"general" : {
+		"dateFormat"				: "D.M.YYYY",
+		"back"						: "Takaisin",
+		"errorMessages"	: {
+			"invalidDate"			: "Annetussa päivämäärässä on jotain mätää"
+		},
+		"validationErrors" : {
+			"productNameEmpty"		: "Tuotteen nimikenttä ei saa olla tyhjä",
+			"productCountEmpty"		: "Tuotteen lkm kenttä ei saa olla tyhjä",
+			"productCountNotNumeric": "Tuotteen lkm kentän arvon pitää olla kokonaisluku",
+			"warehouseSlotEmpty"	: "Varastopaikkakenttä ei saa olla tyhjä"
+		}
+	},
+	"landingPage" : {
+		"pageHeader"				: "Lavahallinta",
+		"insertPallet"				: "Syötä lava",
+		"removePallet"				: "Poista lava"
+	},
+	"palletInsertPage" : {
+		"pageHeader"				: "Syötettävän lavan tiedot",
+		"productName"				: "Tuotteen nimi",
+		"productCount"				: "Lukumäärä",
+		"warehouseSlot"				: "Varastopaikka",
+		"notes"						: "Lisätietoja",
+		"confirmInsert"				: "Vahvista"
+	},
+	"palletRemovalPage" : {
+		"pageHeader"				: "Lavan poisto",
+		"searchSlots"				: "Etsi lavoja",
+		"searchResults"				: "Hakutulokset",
+		"noSearchResults"			: "Ei hakutuloksia",
+		"productCodeOrName"			: "Tuotteen koodi tai nimi",
+		"slotLocation"				: "Varastopaikka",
+		"productName"				: "Tuotteen nimi",
+		"productCount"				: "Lukumäärä",
+		"dateInserted"				: "Syöttö pvm",
+		"notes"						: "Lisätietoja",
+		"detailedInformation"		: "Tarkemmat tiedot",
+		"confirmRemoval"			: "Vahvista poisto"
+	}
+}
