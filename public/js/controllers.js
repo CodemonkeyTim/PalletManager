@@ -1,9 +1,26 @@
 ﻿function initControllers() {
-	saliControllers.controller('landingCtrl', ['$scope', '$timeout', '$location', '$filter', 'DataStoreService',
-		function ($scope, $timeout, $location, $filter, dataStore, gymVisitService) {
-			var storedRoutines = dataStore.get("routines");
+	palletManagerControllers.controller('landingCtrl', ['$scope', '$timeout', '$location', '$filter', '$translate', 'DataStoreService',
+		function ($scope, $timeout, $location, $filter, $translate, dataStore, gymVisitService) {
+			$scope.currentLang = $translate.use();
+			$scope.theOtherLang = "";
+
+			$scope.currentLang == "fi" ? $scope.theOtherLang = "ru" : $scope.theOtherLang = "fi";
 
 			var t = $filter("translate");
+
+			$scope.switchLanguage = function () {
+				if ($scope.currentLang == "ru") {
+					$translate.use("fi");
+					$scope.currentLang = "fi";
+					$scope.theOtherLang = "ru";
+					localStorage.storedLang = "fi";
+				} else {
+					$translate.use("ru");
+					$scope.currentLang = "ru";
+					$scope.theOtherLang = "fi";
+					localStorage.storedLang = "ru";
+				}
+			}
 
 			$scope.toPalletInsert = function() {
 				$location.path("/palletInsert");
@@ -12,10 +29,14 @@
 			$scope.toPalletRemoval = function() {
 				$location.path("/palletRemoval");
 			}
+
+			$scope.toDataExport = function() {
+				$location.path("/dataExport");
+			}
 		}
 	]);
 
-	saliControllers.controller('palletInsertCtrl', ['$scope', '$location', '$filter', 'BackEndService',
+	palletManagerControllers.controller('palletInsertCtrl', ['$scope', '$location', '$filter', 'BackEndService',
 		function ($scope, $location, $filter, BackEndService) {
 			$scope.validationErrors = [];
 			$scope.pallet = {
@@ -70,8 +91,8 @@
 		}
 	]);
 
-	saliControllers.controller('palletRemovalCtrl', ['$scope', '$location', 'BackEndService',
-		function ($scope, $location, BackEndService) {
+	palletManagerControllers.controller('palletRemovalCtrl', ['$scope', '$location', '$translate', 'BackEndService',
+		function ($scope, $location, $translate, BackEndService) {
 			$scope.selectedSlot;
 			$scope.searchTerm = "";
 			$scope.searchResults = [];
@@ -103,6 +124,18 @@
 				}, function () {
 					// TODO: Error handling
 				});
+			}
+
+			$scope.toLanding = function() {
+				$location.path("/landing");
+			}
+		}
+	]);
+
+	palletManagerControllers.controller('dataExportCtrl', ['$scope', '$location', 'BackEndService',
+		function ($scope, $location, BackEndService) {
+			$scope.exportData = function () {
+				window.open("/api/exportSlots");
 			}
 
 			$scope.toLanding = function() {

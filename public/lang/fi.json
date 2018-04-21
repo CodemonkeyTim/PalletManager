@@ -15,7 +15,9 @@
 	"landingPage" : {
 		"pageHeader"				: "Lavahallinta",
 		"insertPallet"				: "Syötä lava",
-		"removePallet"				: "Poista lava"
+		"removePallet"				: "Poista lava",
+		"exportData"				: "Hae tiedot Exceliin",
+		"switchLanguage"			: "Vaihda kieltä"
 	},
 	"palletInsertPage" : {
 		"pageHeader"				: "Syötettävän lavan tiedot",
@@ -38,5 +40,9 @@
 		"notes"						: "Lisätietoja",
 		"detailedInformation"		: "Tarkemmat tiedot",
 		"confirmRemoval"			: "Vahvista poisto"
+	},
+	"dataExportPage" : {
+		"pageHeader"				: "Tietojen vienti",
+		"getExcelFile"				: "Hae Excel tiedosto"
 	}
 }

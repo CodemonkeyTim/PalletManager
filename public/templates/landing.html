@@ -23,6 +23,50 @@
 	</div>
 </div>
 
+<div class="row">
+	<div class="col-sm">
+		<button class="btn btn-block btn-primary btn-tall btn-bottom-margin" ng-click="switchLanguage()">
+			<i class="lang-icon lang-{{ currentLang }}"></i>
+			<i class="fa fa-arrow-right big-arrow"></i>
+			<i class="lang-icon lang-{{ theOtherLang }}"></i>
+		</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm">
+		<button class="btn btn-block btn-primary btn-tall btn-bottom-margin" ng-click="toDataExport()">
+			{{ 'landingPage.exportData' | translate }}
+		</button>
+	</div>
+</div>
+
 <style>
-	
+	.lang-icon {
+		width: 30px;
+		height: 30px;
+
+		background-size: contain;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+		display: inline-block;
+		line-height: 75px;
+
+		border-radius: 25px;
+	}
+
+	.big-arrow {
+		font-size: 30px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.lang-fi {
+		background-image: url("gfx/fi.svg");
+	}
+
+	.lang-ru {
+		background-image: url("gfx/ru.svg");
+	}
 </style>

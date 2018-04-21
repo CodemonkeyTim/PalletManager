@@ -15,4 +15,5 @@ $router->group(["prefix" => '/api'], function () use ($router) {
 	$router->get('/searchSlots', ['uses' => 'SlotController@searchSlots']);
 	$router->post('/insertToSlot', ['uses' => 'SlotController@insertPalletToSlot']);
 	$router->delete('/removeFromSlot/{slotId}', ['uses' => 'SlotController@removePalletFromSlot']);
+	$router->get('/exportSlots', ['uses' => 'SlotController@exportSlots']);
 });

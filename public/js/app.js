@@ -1,13 +1,13 @@
 ﻿var palletManagerApp;
-var saliControllers;
+var palletManagerControllers;
 
 function initAngular() {
-    saliControllers = angular.module('saliControllers', []);
+    palletManagerControllers = angular.module('palletManagerControllers', []);
 
     palletManagerApp = angular.module('palletManagerApp', [
         'ngRoute',
         'pascalprecht.translate',
-        'saliControllers'
+        'palletManagerControllers'
     ]);
 }
 
@@ -17,7 +17,8 @@ function configAngular() {
             var simpleRoutes = [
                 "landing",
                 "palletInsert",
-                "palletRemoval"
+                "palletRemoval",
+                "dataExport"
             ]
             
             $.each(simpleRoutes, function(index, route) {
@@ -36,7 +37,13 @@ function configAngular() {
                 suffix: '.json'
             });
             
-            $translateProvider.preferredLanguage('fi');
+            var storedLang = localStorage.storedLang;
+
+            if (!storedLang) {
+                $translateProvider.preferredLanguage('ru');
+            } else {
+                $translateProvider.preferredLanguage(storedLang);
+            }
 
             $translateProvider.useSanitizeValueStrategy('escape');
 

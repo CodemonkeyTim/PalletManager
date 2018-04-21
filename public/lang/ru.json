@@ -1,10 +1,48 @@
 {
 	"general" : {
-
+		"dateFormat"				: "D.M.YYYY",
+		"back"						: "Назад",
+		"errorMessages"	: {
+			"invalidDate"			: "Дата недействительна."
+		},
+		"validationErrors" : {
+			"productNameEmpty"		: "Требуется название продукта",
+			"productCountEmpty"		: "Требуется количество товаров",
+			"productCountNotNumeric": "Количество товаров должно быть числом",
+			"warehouseSlotEmpty"	: "Требуется место"
+		}
 	},
 	"landingPage" : {
-		"insertPallet" 			: "вставить поддон",
-		"removePallet"			: ""
+		"pageHeader"				: "Контроль поддонов",
+		"insertPallet"				: "Вставить поддон",
+		"removePallet"				: "Удалить поддон",
+		"exportData"				: "Загрузить Excel файл",
+		"switchLanguage"			: "Переключить язык"
+	},
+	"palletInsertPage" : {
+		"pageHeader"				: "Информация о паллете",
+		"productName"				: "Наименование товара",
+		"productCount"				: "Количество продуктов",
+		"warehouseSlot"				: "Место нахождения",
+		"notes"						: "Заметки",
+		"confirmInsert"				: "подтвердить"
+	},
+	"palletRemovalPage" : {
+		"pageHeader"				: "Удалить поддон",
+		"searchSlots"				: "Поиск поддонов",
+		"searchResults"				: "Результаты поиска",
+		"noSearchResults"			: "Нет Результатов Поиска",
+		"productCodeOrName"			: "Имя или код",
+		"slotLocation"				: "Место нахождения",
+		"productName"				: "Наименование товара",
+		"productCount"				: "Количество",
+		"dateInserted"				: "Дата, когда вставлена",
+		"notes"						: "Заметки",
+		"detailedInformation"		: "Подробная информация",
+		"confirmRemoval"			: "подтвердить"
+	},
+	"dataExportPage" : {
+		"pageHeader"				: "Экспорт информации",
+		"getExcelFile"				: "Загрузить Excel файл"
 	}
-
 }
