@@ -21,7 +21,7 @@ class SlotController extends Controller
     public function searchSlots(Request $req) {
     	$searchTerm = $req->input("searchTerm");
 
-    	$pallets = \App\Pallet::where("productName", "like", "%" . $searchTerm . "%")->limit(10)->get();
+    	$pallets = \App\Pallet::where("productName", "=", $searchTerm)->limit(20)->get();
 
     	$slots = [];
 
