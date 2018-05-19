@@ -60,6 +60,12 @@ class SlotController extends Controller
     public function insertPalletToSlot(Request $req) {
         $palletData = $req->input("pallet");
 
+        $existingSlot = \App\Slot::where("location", "=", $palletData["warehouseSlot"])->first();
+
+        if ($existingSlot) {
+            return response()->json(["msg" => "Slot already exists, can't insert"], 409);
+        }
+
         $slot = new \App\Slot();
         $slot->location = $palletData["warehouseSlot"];
         $slot->save();

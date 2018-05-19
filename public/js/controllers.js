@@ -54,11 +54,9 @@
 
 				if (fieldsAreValid) {
 					BackEndService.insertPallet($scope.pallet).then(function (pallet) {
-						console.log(pallet);
-
 						$location.path("/landing");
 					}, function () {
-						// TODO: Error handling
+						$scope.validationErrors.push(t("general.validationErrors.slotNotEmpty"));
 					});
 				}
 			}

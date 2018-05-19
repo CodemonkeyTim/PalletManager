@@ -9,7 +9,8 @@
 			"productNameEmpty"		: "Tuotteen nimikenttä ei saa olla tyhjä",
 			"productCountEmpty"		: "Tuotteen lkm kenttä ei saa olla tyhjä",
 			"productCountNotNumeric": "Tuotteen lkm kentän arvon pitää olla kokonaisluku",
-			"warehouseSlotEmpty"	: "Varastopaikkakenttä ei saa olla tyhjä"
+			"warehouseSlotEmpty"	: "Varastopaikkakenttä ei saa olla tyhjä",
+			"slotNotEmpty"			: "Varastopaikassa on jo jotain"
 		}
 	},
 	"landingPage" : {

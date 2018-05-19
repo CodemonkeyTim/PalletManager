@@ -9,7 +9,8 @@
 			"productNameEmpty"		: "Требуется название продукта",
 			"productCountEmpty"		: "Требуется количество товаров",
 			"productCountNotNumeric": "Количество товаров должно быть числом",
-			"warehouseSlotEmpty"	: "Требуется место"
+			"warehouseSlotEmpty"	: "Требуется место",
+			"slotNotEmpty"			: "В этом месте уже есть что-то"
 		}
 	},
 	"landingPage" : {
